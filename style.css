@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Instrument Serif", sans-serif;
   background-color: var(--light);
@@ -23,9 +24,14 @@ img {
 }
 
 h1 {
-  font-size: 5rem, 6vw, 7rem;
+  font-size: clamp(5rem, 6vw, 7rem);
   font-weight: 500;
   line-height: 0.8;
+}
+
+h2 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 500;
 }
 
 p {
@@ -45,21 +51,12 @@ section {
   color: var(--light);
 }
 
-.outro {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .sky-container,
 .hero-copy,
 .window-container,
 .hero-header {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   will-change: transform;
 }
@@ -67,8 +64,8 @@ section {
 .sky-container {
   height: 350svh;
 }
+
 .hero-copy {
-  height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +76,18 @@ section {
 }
 
 .window-container {
+  position: relative;
   height: 100svh;
+}
+
+.window-container h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .hero-header {
@@ -95,21 +103,28 @@ section {
   flex-direction: column;
   justify-content: space-between;
 }
-.hero-header .col p{
-width: 50%;
+
+.hero-header .col p {
+  width: 50%;
 }
 
-.hero-header .col:nth-child(2){
-align-items: flex-end;
-text-align: right;
+.hero-header .col:nth-child(2) {
+  align-items: flex-end;
+  text-align: right;
 }
 
-@media (max-width:1000px){
-    h1{
-        font-size: 3rem;
-    }
+.outro {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    p{
-        font-size: 1.125rem;
-    }
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
 }

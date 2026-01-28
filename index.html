@@ -1,51 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jets Scroll Animation</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="hero">
-      <div class="sky-container">
-        <img src="/sky.webp" alt="" />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jets Scroll Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-      <div class="hero-copy">
-        <h1>
-          What unfolds here is not a scene, but a duration. A sustained moment.
-          where scale dissolves, edges soften, and perception lingers longer
-          than expected. The frame holds steady while the world behind it
-          shifts.
-        </h1>
-      </div>
+<section class="hero">
 
-      <div class="window-container">
-        <img src="/window.webp" alt="" />
-      </div>
+  <div class="sky-container">
+    <img src="/sky.webp" alt="" />
+  </div>
 
-      <div class="hero-header">
-        <div class="col">
-          <h1>
-            An aperture <br />
-            into stillness
-          </h1>
-          <p>
-            A constructed moment, suspended between form and vastness. Light,
-            surface, and scale are carefully arranged to suggest movement
-            without urgency, presence without intrusion.
-          </p>
-        </div>
-        <div class="col">
-          <p>Observation Mode</p>
-          <h1>Where distance <br /> becomes a presence</h1>
-        </div>
-      </div>
-    </section>
-    <section class="outro"></section>
-    <h1>End of view</h1>
+  <div class="hero-copy">
+    <h1>
+      What unfolds here is not a scene, but a duration. A sustained moment.
+      where scale dissolves, edges soften, and perception lingers longer
+      than expected.
+    </h1>
+  </div>
 
-    <script type="module" src="./script.js"></script>
-  </body>
+  <div class="window-container">
+    <img src="/window.webp" alt="" />
+    <h2>Jets</h2>
+  </div>
+
+  <div class="hero-header">
+    <div class="col">
+      <h1>An aperture<br>into stillness</h1>
+      <p>
+        A constructed moment, suspended between form and vastness.
+      </p>
+    </div>
+    <div class="col">
+      <p>Observation Mode</p>
+      <h1>Where distance<br>becomes a presence</h1>
+    </div>
+  </div>
+
+</section>
+
+<section class="outro">
+  <h1>End of view</h1>
+</section>
+
+<!-- GSAP + ScrollTrigger + Lenis -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+<script src="./script.js"></script>
+</body>
 </html>
